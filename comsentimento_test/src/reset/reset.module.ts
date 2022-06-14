@@ -17,14 +17,14 @@ import { ResetService } from './reset.service';
             secure: false,
             auth: {
                user: 'teste1234_4@yahoo.com',
-               pass: 'sbchjafmuvmwemxh',
+               pass: 'alfxuksqcmcuqqjz',
             },
             debug: false,
             logger: true
 
           },
           defaults: {
-              from: 'mattostech@yahoo.com',
+              from: 'teste1234_4@yahoo.com',
           },
       }),
       UserModule,

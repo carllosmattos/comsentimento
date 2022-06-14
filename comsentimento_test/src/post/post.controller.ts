@@ -87,7 +87,9 @@ export class PostController {
           description: body.description,
           file_name: file.filename,
           status: Status.OPEN
-        })
+        });
+      } else {
+        throw new UnauthorizedException();
       }
     } catch (error) {
       throw new UnauthorizedException();
@@ -142,7 +144,7 @@ export class PostController {
       const data = await this.userService.findOneBy({ id });
 
       if (data.is_admin === 1) {
-        const post = await this.postService.findOneBy({ id: param.id });
+        let post = await this.postService.findOneBy(param.id);
 
         const update = await this.postService.update(post.id, {
           edited_by: data.id,
@@ -152,19 +154,25 @@ export class PostController {
           file_name: file.filename
         });
 
+        const newPost = {
+          ...post,
+          edited_by: data.id,
+          title: body.title,
+          description: body.description,
+          status: body.status,
+          file_name: file.filename
+        }
+
         if (update && file.filename) {
-          console.log(`${uploadDir}${post.file_name}`);
-          return rimraf(`${uploadDir}${post.file_name}`, function (err: string) {
+          rimraf(`${uploadDir}${post.file_name}`, function (err: string) {
             if (err) {
-              return console.error(err);
+              console.error(err);
+            } else {
+              console.log('successfully edited');
             }
-            console.log('successfully edited');
           });
         };
-      };
-
-      return {
-        message: 'success',
+        return newPost;
       };
     } catch (error) {
       throw new UnauthorizedException();
@@ -198,23 +206,22 @@ export class PostController {
       const data = await this.userService.findOneBy({ id });
 
       if (data.is_admin === 1) {
-        const post = await this.postService.findOneBy({ id: param.id });
+        const post = await this.postService.findOneBy(param.id);
 
         const deleted = await this.postService.delete({ id: post.id });
 
         if (deleted && post.file_name) {
           console.log(`${uploadDir}${post.file_name}`);
-          return rimraf(`${uploadDir}${post.file_name}`, function (err: string) {
+          rimraf(`${uploadDir}${post.file_name}`, function (err: string) {
             if (err) {
-              return console.error(err);
+              console.error(err);
             }
             console.log('successfully deleted');
           });
         };
       };
-
       return {
-        message: 'success',
+        message: 'successfully deleted',
       };
     } catch (error) {
       console.log('error');
@@ -239,6 +246,7 @@ export class PostController {
       let response: any;
       let posts = [];
       response = await this.postService.find();
+      console.log(response);
 
       for (const i in response) {
         posts.push({
