@@ -1,0 +1,63 @@
+<main class="form-signin">
+  <form [formGroup]="form" (submit)="submit()">
+    <!-- <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+    <h1 class="h3 mb-3 fw-normal">Please register here</h1>
+
+    <div class="form-floating">
+      <input formControlName="first_name" class="form-control" placeholder="First name">
+      <label>First name</label>
+
+      <div *ngIf="f['first_name'].touched && f['first_name'].invalid" class="alert alert-danger">
+        <div *ngIf="f['first_name'].errors && f['first_name'].errors['required']">First Name is required.</div>
+        <div *ngIf="f['first_name'].errors && f['first_name'].errors['minlength']">First Name should be 3 character.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating">
+      <input formControlName="last_name" class="form-control" placeholder="Last name">
+      <label>Last name</label>
+
+      <div *ngIf="f['last_name'].touched && f['last_name'].invalid" class="alert alert-danger">
+        <div *ngIf="f['last_name'].errors && f['last_name'].errors['required']">Last Name is required.</div>
+        <div *ngIf="f['last_name'].errors && f['last_name'].errors['minlength']">Last Name should be 3 character.</div>
+      </div>
+    </div>
+
+    <div class="form-floating">
+      <input formControlName="email" type="email" class="form-control" placeholder="name@example.com">
+      <label>Email address</label>
+
+      <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+        <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+        <div *ngIf="f['email'].errors && f['email'].errors['email']">Email is not valid.</div>
+      </div>
+    </div>
+
+    <div class="form-floating">
+      <input formControlName="password" type="password" class="form-control" placeholder="Password">
+      <label>Password</label>
+
+      <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+        <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+        <div *ngIf="f['password'].errors && f['password'].errors['pattern']">
+          The password must contain:
+          <br>- At least one capital letter;
+          <br>- At least one lowercase letter;
+          <br>- At least one number;
+          <br>- At least one special character</div>
+      </div>
+    </div>
+
+    <div class="form-floating">
+      <input formControlName="password_confirm" type="password" class="form-control" placeholder="Password confirm">
+      <label>Password confirm</label>
+
+      <div *ngIf="f['password_confirm'].touched && f['password_confirm'].invalid" class="alert alert-danger">
+        <div *ngIf="f['password_confirm'].errors && f['password_confirm'].errors['required']">Password Confirm is required.</div>
+      </div>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+  </form>
+</main>

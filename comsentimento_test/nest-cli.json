@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "sourceRoot": "src",
+  "collection": "@nestjs/schematics",
+  "compilerOptions": {
+    "plugins": ["@nestjs/swagger"],
+    "assets": ["mail/templates/**/*"],
+    "watchAssets": true
+  }
+}
