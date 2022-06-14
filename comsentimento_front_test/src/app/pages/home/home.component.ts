@@ -24,8 +24,6 @@ export class HomeComponent implements OnInit {
         this.message = `Hi ${res.first_name} ${res.last_name}!`;
         const x = AuthService.authEmitter.emit(true);
 
-        // const x = this.postsService.listPost();
-
         console.log(Headers);
       },
       error: () => {

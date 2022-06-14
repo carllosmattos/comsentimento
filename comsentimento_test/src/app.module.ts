@@ -15,7 +15,6 @@ import { PostModule } from './post/post.module';
       username: 'postgres',
       password: 'postgres',
       database: 'comsentimento_db',
-      // url: process.env.DATABASE_URL,
       autoLoadEntities: true,
       synchronize: true,}),
     UserModule,
