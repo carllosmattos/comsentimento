@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "242bddd7-0b5e-4e03-9d46-36ea0ac50a5e",
+		"name": "COMSENTIMENTO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Back",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "getUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU1MDk3ODEzLCJleHAiOjE2NTUwOTgwNTN9.kN9bdRkDfcjZaZBFLjRBpEwpOLj1k9RS2v0a2xtzNKk",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/admin/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUser",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"duduvieiramattos@gmail.com\",\n  \"password\": \"dudu386571\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"email\": \"dudukiuubi@gmail.com\",\n  \"password\": \"dudu386571\",\n  \"password_confirm\": \"dudu386571\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU1MDM5ODAwLCJleHAiOjE2NTUwNDAwNDB9._R_t8MMg56gavYNkiBwZQxUEkju8BcRDhcZk_ee4NCQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"duduvieiramattos@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/forgot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"duduvieiramattos@gamil.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Back Local",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "getUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU1MDk5NzA0LCJleHAiOjE2NTUxMDE1MDR9.uEziShzBKDgGhZ1Aso1TaR7ZP9PG_giTLL9Yt0lK054",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/admin/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI0NTEzYmU1LTllMmUtNGQ5ZS05N2I5LTFhMWRhNWJhNzk4ZiIsImlhdCI6MTY1NTE1MTk2MCwiZXhwIjoxNjU1MTUzNzYwfQ.wjcEngGRE5V29zdArh2DaOcuVE0Q-pi5yC730-KfvIA",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/userb4513be5-9e2e-4d9e-97b9-1a1da5ba798f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"userb4513be5-9e2e-4d9e-97b9-1a1da5ba798f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Upload",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2E2OTUzLWVlYWYtNGQ0Zi05MGU5LTYzMDljODE1NTc1MSIsImlhdCI6MTY1NTI0NjE1NiwiZXhwIjoxNjU1MjQ3OTU2fQ.X6ET14Yc2va-KNfnbMIgmwlLH4z5YztI5pchOeMxMBA",
+										"type": "default"
+									},
+									{
+										"key": "description",
+										"value": "",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/carllosmattos/Downloads/antigo.pdf"
+										},
+										{
+											"key": "title",
+											"value": "A cura do câncer",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "xxxxxxxxxxxxxxxxxxxxxxxafkjçf f asijfnaspifnifnf",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/post/upload",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"post",
+										"upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edited",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2E2OTUzLWVlYWYtNGQ0Zi05MGU5LTYzMDljODE1NTc1MSIsImlhdCI6MTY1NTI0NjE1NiwiZXhwIjoxNjU1MjQ3OTU2fQ.X6ET14Yc2va-KNfnbMIgmwlLH4z5YztI5pchOeMxMBA",
+										"type": "default"
+									},
+									{
+										"key": "description",
+										"value": "",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/carllosmattos/Downloads/DAS.pdf"
+										},
+										{
+											"key": "title",
+											"value": "Câncer",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "Cancer a cura skdfjndof s",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/post/edit487c0614-f2ea-4907-9621-240570ce9db6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"post",
+										"edit487c0614-f2ea-4907-9621-240570ce9db6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2E2OTUzLWVlYWYtNGQ0Zi05MGU5LTYzMDljODE1NTc1MSIsImlhdCI6MTY1NTI0NjE1NiwiZXhwIjoxNjU1MjQ3OTU2fQ.X6ET14Yc2va-KNfnbMIgmwlLH4z5YztI5pchOeMxMBA",
+										"type": "default"
+									},
+									{
+										"key": "description",
+										"value": "",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/carllosmattos/Downloads/DAS.pdf",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "Cancer",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+											"type": "default",
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/post/delete487c0614-f2ea-4907-9621-240570ce9db6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"post",
+										"delete487c0614-f2ea-4907-9621-240570ce9db6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PublicList",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI0NTEzYmU1LTllMmUtNGQ5ZS05N2I5LTFhMWRhNWJhNzk4ZiIsImlhdCI6MTY1NTE4OTQ4NywiZXhwIjoxNjU1MTkxMjg3fQ.BsRzklml4EM0EwH8M68uDo4ccOpuM_Ew3NljEfQDGDw",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/carllosmattos/Downloads/DAS-PGMEI-45718366000139-AC2022.pdf",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "sas",
+											"type": "default",
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/post/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"post",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"carllosmattos@yahoo.com\",\n  \"password\": \"Dudu965537*\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"email\": \"carllosmattos@yahoo.com\",\n  \"password\": \"dudu386571\",\n  \"password_confirm\": \"Dudu965537*\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUser",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU1MDM5ODAwLCJleHAiOjE2NTUwNDAwNDB9._R_t8MMg56gavYNkiBwZQxUEkju8BcRDhcZk_ee4NCQ",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgot",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"carllosmattos@yahoo.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/forgot",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"forgot"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2E2OTUzLWVlYWYtNGQ0Zi05MGU5LTYzMDljODE1NTc1MSIsImlhdCI6MTY1NTI0NjE1NiwiZXhwIjoxNjU1MjQ3OTU2fQ.X6ET14Yc2va-KNfnbMIgmwlLH4z5YztI5pchOeMxMBA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"352g24g439\",\n    \"password\": \"Dudu386571*\",\n    \"password_confirm\": \"Dudu386571*\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/reset",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"reset"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2E2OTUzLWVlYWYtNGQ0Zi05MGU5LTYzMDljODE1NTc1MSIsImlhdCI6MTY1NTI0NjE1NiwiZXhwIjoxNjU1MjQ3OTU2fQ.X6ET14Yc2va-KNfnbMIgmwlLH4z5YztI5pchOeMxMBA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
